@@ -8,14 +8,4 @@ class Curator < ActiveRecord::Base
   has_many :collections
   has_many :observations
 
-  #   , :storage => :s3, :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
-
-  # def s3_credentials
-  #   {
-  #    bucket: Rails.application.secrets.s3_bucket,
-  #    access_key_id: Rails.application.secrets.s3_key_id,
-  #    secret_access_key: Rails.application.secrets.s3_secret_key
-  #   }
-  # end
-
 end

@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore Environment Configuration Files
+config/database.yml
+.env
