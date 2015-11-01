@@ -1,15 +1,16 @@
 <%= flash[:errors] %>
 
 <div class="form">
-<h2>New Observation</h2>
+<h2 class = "center-text">New Observation</h2>
 <%= form_for @observation, url: collection_observations_path(@collection),  html: { multipart: true } do |f|%>
-  <p><%= f.text_area :description, placeholder: 'Description', cols: '92', rows: '10' %></p>
-<button class= "file-upload" >Choose
+<div class="3 columns">
+  <div><%= f.text_area :description, placeholder: 'Description', rows: '5' %></div>
+<div class = "center-text"><button class= "file-upload" >Upload
   <%= f.file_field :image %>
-</button>
+</button></div>
   <%= f.hidden_field :collection_id, value: @collection.id%>
   <%= f.hidden_field :curator_id, value: current_user.id %>
-  <p><%= f.submit "Add", class: "radius success small button" %></p>
+<div class = "center-text"><%= f.submit "Pitch your observation!", class: "radius success large button" %></div>
 
 <% end %>
 </div>
